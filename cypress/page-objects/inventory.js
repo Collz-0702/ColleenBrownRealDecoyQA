@@ -1,4 +1,5 @@
 class productsInventory {
+    //#region Selectors
 
     get sortSelectorButton() {
         return ('.product_sort_container')
@@ -21,7 +22,9 @@ class productsInventory {
     get cartIcon() {
         return ('.shopping_cart_link')
     }
+    //#endregion
 
+    //#region Methods
 
     sortProducts(sort) {
         cy.get(this.sortSelectorButton).select(sort)
@@ -37,6 +40,7 @@ class productsInventory {
     navigateToCart() {
         cy.get(this.cartIcon).click()
     }
+    //#endregion
 
 }
 export default new productsInventory()
