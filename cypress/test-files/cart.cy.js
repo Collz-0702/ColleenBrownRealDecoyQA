@@ -40,7 +40,7 @@ describe('Cart Page', () => {
         cy.get(productsInventory.itemPrice).should('have.text', '$29.99$9.99')
         cartPage.completeCheckOut()
         cy.get(cartPage.completeMessage).should('have.text', 'Checkout: Complete!')
-        cy.get(cartPage.thankYouMessage).should('have.text', 'THANK YOU FOR YOUR ORDER')
+        cy.get(cartPage.thankYouMessage).should('have.text', 'Thank you for your order!')
         cy.get(cartPage.backHomeButton).should('be.visible')
         cy.get(cartPage.backHomeButton).click()
         cy.url().should('contain', 'inventory')
