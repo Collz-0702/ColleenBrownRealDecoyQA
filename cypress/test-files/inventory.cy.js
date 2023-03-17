@@ -49,5 +49,14 @@ describe('Inventory Page', () => {
         cy.get(productsInventory.cartItemName).should('not.exist')
 
     })
+    it('should not add an item that is already added to cart', () => {
+        loginPage.login('standard_user', 'secret_sauce')
+        cy.get(loginPage.inventoryList).should('be.visible')
+
+        productsInventory.addToCartFromProductPage()
+        cy.get(productsInventory.removeSauceLabBoltButton).should('be.visible')
+        cy.get(productsInventory.addCartButton).should('not.exist')
+
+    })
 
 })
