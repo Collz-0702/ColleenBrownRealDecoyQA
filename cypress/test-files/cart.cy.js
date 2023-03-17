@@ -33,7 +33,7 @@ describe('Cart Page', () => {
         loginPage.login('standard_user', 'secret_sauce')
         cy.get(loginPage.inventoryList).should('be.visible')
         cartPage.addMultipleCartItems()
-        cy.get(cartPage.cartNumber).should('have.text', 3)
+        cy.get(cartPage.cartNumber).should('have.text', 2)
         cy.get(productsInventory.cartItemName).should('have.text', 'Sauce Labs BackpackSauce Labs Bike Light')
         cartPage.checkOut('Colleen', 'Williams', '00000')
         cy.get(cartPage.itemDescriptionName).should('have.text', 'Sauce Labs BackpackSauce Labs Bike Light')
