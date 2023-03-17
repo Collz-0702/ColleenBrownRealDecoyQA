@@ -1,7 +1,7 @@
 module.exports = {
     sort: {
         'A to Z': 'AZ',
-        'Low to High': 'lowHigh',
+        'Low to High': 'lohi',
     },
     products:
         [{
