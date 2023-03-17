@@ -1,6 +1,6 @@
 # ColleenBrown RealDecoy QA Challenge
 
-Automation Testing is used to speed up testing of software to save time and cost and improve accuracy. During the bootcamp, we were taught two frameworks, WebdriverIo and Cypress with the use of JavaScript. Cypress was chosen to complete this project. In this project, various areas of the Sauce Labs website will be automated.
+Automation Testing is used to speed up testing of software to save time, cost and improve accuracy. Cypress was chosen to complete this project. In this project, various areas of the Sauce Labs website will be automated.
 
 ## Dependencies
 NodeJS (v12, v14 or above)
@@ -20,8 +20,7 @@ npx cypress open
 #For reporter
 npm install --save-dev mochawesome mochawesome-merge mochawesome-report-generator
 npm install --save-dev npm-run-all
-#For Iframe
-npm install cypress-iframe --save
+
 
 ```
 
@@ -47,11 +46,10 @@ Run test suites in the Cypress GUI, therefore, run the command
 ```
 npx cypress open
 ```
-And run test suites present. The email address for Authentication test 1 will have to be changed if the test is being ran more than once. If at anytime the test may fail(flaky) refresh the test using the refresh button at the top right hand corner in the Cypress GUI
+If at anytime the test may fail(flaky) refresh the test using the refresh button at the top right hand corner in the Cypress GUI or clear the chrome browser history in the Cypress GUI
 
 ## Acknowledgement
 Thanks to the Management and team at RealDecoy for considering me for this position.
-##Points to Note
-The CI/CD pipeline challenge was attempted.
+
 ## Project Status
 Completed to meet the requirements of the assignment. 
