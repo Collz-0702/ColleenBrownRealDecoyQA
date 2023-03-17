@@ -1,5 +1,5 @@
 class cartPage {
-
+    // #region Selectors
 
     get cartItemTwo() {
         return ('#item_4_title_link')
@@ -62,6 +62,9 @@ class cartPage {
     get backHomeButton() {
         return ('#back-to-products')
     }
+    // #endregion
+
+    // #region Methods
 
     checkOut(firstName, lastName, zipCode) {
         cy.get(this.checkOutButton).should('be.visible')
@@ -97,5 +100,6 @@ class cartPage {
     navigateToCart() {
         cy.get(this.cartIcon).click()
     }
+    // #endregion
 }
 export default new cartPage()
