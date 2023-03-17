@@ -14,7 +14,7 @@ describe('Cart Page', () => {
         cy.get(loginPage.inventoryList).should('be.visible')
         cartPage.addCart()
         cy.get(cartPage.cartNumber).should('have.text', 1)
-        cy.get(productsInventory.removeSauceLabsBackpackButton).should('be.visible')
+        cy.get(cartPage.removeSauceLabsBackpackButton).should('be.visible')
         cy.get(productsInventory.cartItemName).should('have.text', 'Sauce Labs Backpack')
         cy.get(cartPage.cartQuantity).should('have.text', 1)
 
@@ -24,7 +24,7 @@ describe('Cart Page', () => {
         loginPage.login('standard_user', 'secret_sauce')
         cy.get(loginPage.inventoryList).should('be.visible')
         cartPage.addMultipleCartItems()
-        cy.get(cartPage.cartNumber).should('have.text', 3)
+        cy.get(cartPage.cartNumber).should('have.text', 2)
         cy.get(productsInventory.cartItemName).should('have.text', 'Sauce Labs BackpackSauce Labs Bike Light')
 
     })
@@ -32,7 +32,7 @@ describe('Cart Page', () => {
     it('should be able to checkout cart', () => {
         loginPage.login('standard_user', 'secret_sauce')
         cy.get(loginPage.inventoryList).should('be.visible')
-        addToCart.addMultipleCartItems()
+        cartPage.addMultipleCartItems()
         cy.get(cartPage.cartNumber).should('have.text', 3)
         cy.get(productsInventory.cartItemName).should('have.text', 'Sauce Labs BackpackSauce Labs Bike Light')
         cartPage.checkOut('Colleen', 'Williams', '00000')
