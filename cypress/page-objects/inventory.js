@@ -39,4 +39,4 @@ class productsInventory {
     }
 
 }
-export default new Products()
+export default new productsInventory()
