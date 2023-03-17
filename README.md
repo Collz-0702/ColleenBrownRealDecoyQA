@@ -50,6 +50,8 @@ npx cypress open
 And run test suites present. The email address for Authentication test 1 will have to be changed if the test is being ran more than once. If at anytime the test may fail(flaky) refresh the test using the refresh button at the top right hand corner in the Cypress GUI
 
 ## Acknowledgement
-Thanks to the Management and team at RealDecoy for considering me for this position
-## Project Status and Notes
-Completed to meet the requirements of the assignment.
+Thanks to the Management and team at RealDecoy for considering me for this position.
+##Points to Note
+The CI/CD pipeline challenge was attempted.
+## Project Status
+Completed to meet the requirements of the assignment. 
