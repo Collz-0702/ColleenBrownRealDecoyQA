@@ -1,5 +1,5 @@
 class Links {
-
+    // #region Selectors
     get twitterFooter() {
         return ('a[href="https://twitter.com/saucelabs"]')
     }
@@ -9,8 +9,9 @@ class Links {
     get linkedInFooter() {
         return ('a[href="https://www.linkedin.com/company/sauce-labs/"]')
     }
+    // #endregion
 
-
+    // #region Methods
     contactTwitter() {
         cy.get(this.twitterFooter).click()
     }
@@ -20,6 +21,7 @@ class Links {
     contactLinkedIn() {
         cy.get(this.linkedInFooter).click()
     }
+    // #endregion
 
 }
 export default new Links()
